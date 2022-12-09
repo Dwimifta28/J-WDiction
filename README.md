@@ -1,2 +1,2 @@
 # J-WDiction
-Jakarta Water Discharge Prediction
+Jakarta Water Discharge Prediction merupakan sistem prediksi debit air Jakarta menggunakan algoritma LSTM (Long Short Term Memory) dimana algoritma ini merupakan penyimpanan data yang dapat memproses, memprediksi, dan mengklasifikasikan informasi yang telah disimpan dalam jangka waktu lama sekali pun. LSTM hadir sebagai bentuk modifikasi dari recurrent neural network atau RNN dan termasuk sebagai salah satu yang populer. Tujuan utama dari LSTM pada kasus prediksi adalah membuat prediksi yang akurat terhadap suatu variabel. Peramalan terbaik didasarkan pada tingkat kesalahan prediksi, di mana semakin kecil tingkat kesalahan yang dihasilkan, semakin tepat sebuah metode dalam memprediksi
