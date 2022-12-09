@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Sistem Prediksi Debit Air di Jakarta</title>
+</head>
+
+<body style="background-color: #F8F9F9;">
+  <!--   Header -->
+  <div class="d-flex justify-content-between align-items-center px-5 py-3">
+    <!-- <div>
+      <img src={{ url_for('static', filename="images/bisaai.jpeg" ) }} height="50" width="auto">
+    </div> -->
+    <h1>Jakarta Water Discharge Prediction</h1>
+    <div>
+      <img src={{ url_for('static', filename="images/kampus-merdeka.png" ) }} height="50" width="auto">
+    </div>
+  </div>
+  <!-- Header End  -->
+
+  <div class="container-fluid my-5">
+    <div class="mx-5">
+      <div class="row gx-5">
+        <div class="p-5 col-8 card" style="background-color: #e9e8e8;">
+          <form action="/predict" method="post">
+            <!-- Input Lama Bekerja (Tahun) -->
+            <div class="mb-3">
+              <label for="onehour" class="form-label">Jam Pertama</label>
+              <input type="number" name="onehour" class="form-control" id="lama_bekerja" required>
+            </div>
+            <!-- End of Input Lama Bekerja (Tahun) -->
+
+            <!-- Input Jam Kerja Perbulan -->
+            <div class="mb-3">
+              <label for="twohour" class="form-label">Jam Kedua</label>
+              <input type="number" name="twohour" class="form-control" id="jam_kerja_perbulan" required>
+            </div>
+            <!-- End of Input Jam Kerja Perbulan -->
+
+            <div class="mb-3">
+              <label for="threehour" class="form-label">Jam Ketiga</label>
+              <input type="number" name="threehour" class="form-control" id="jam_kerja_perbulan" required>
+            </div>
+            
+            <!-- Button Submit -->
+            <div class="d-flex justify-content-end mt-5">
+              <button type="submit" class="btn btn-success">Prediksi</button>
+            </div>
+            <!-- End of Button Submit -->
+          </form>
+        </div>
+
+        <div class="col-4 pt-5 px-2 card gx-3" style="background-color: #E2F6FF;">
+          <h3 class="text-center">Hasil Prediksi</h2> 
+            <p class="text-center">Prediksi Debit Air di Jakarta <span class="fw-bold">{{prediction_result}} m<sup>3</sup></span></p>
+            <!-- {% if debit %}
+            <p class="text-center">Prediksi Banjir Jakara <span class="fw-bold">{{prediction_result}} & {{debit_air}}</span></p>
+            {% endif %} -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
